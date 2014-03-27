@@ -6,19 +6,19 @@
 //* style variables *//
 
 // headline font
-$headline-font: "Crimson Text", Times, "Times New Roman", serif;
+$headline-font: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 
 // main font
-$font: "Crimson Text", Times, "Times New Roman", serif;
+$font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
 // control font
-$control-font: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+$control-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // buttons font
 $button-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // forms font
-$form-font: "Ovo", Times, "Times New Roman", serif;
+$form-font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
 $theme-color-1: #f04f23;
 $theme-color-2: #2f2f2f;
@@ -140,6 +140,9 @@ $mobile-menu-color: $theme-color-6;
 // format user submitted code in comments
 @import "code_ray";
 
+// attlee overrides and theme-specific
+@import "attlee";
+
 // start: forms
 
 // bootstrap forms
@@ -157,7 +160,7 @@ label, input, button, select, textarea {
   line-height: 25px;
 }
 
-input::-moz-focus-inner { 
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -593,17 +596,17 @@ hr {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   font-style: italic; 
+   font-style: italic;
    color: lighten($theme-color-14, 20%);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   font-style: italic; 
+   font-style: italic;
    color: lighten($theme-color-14, 20%);
 }
 
-:-ms-input-placeholder {  
-   font-style: italic; 
+:-ms-input-placeholder {
+   font-style: italic;
    color: lighten($theme-color-14, 20%);
 }
 
@@ -630,7 +633,7 @@ img {
 body {
   background: $theme-color-11;
   margin: 0;
-  font: 20px/30px $font;
+  font: 16px/22px $font;
   color: $theme-color-2;
 }
 
@@ -845,7 +848,7 @@ header {
 }
 
 // if the site has a logo, center it it above content in mobile view
-  
+
 .site-logo {
   position:relative;
   text-align: center;
@@ -1041,7 +1044,7 @@ nav.width-container {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -webkit-appearance: none;
-    width: 71%; 
+    width: 71%;
     @include border-radius-top-right(0px);
     @include border-radius-bottom-right(0px);
     border: 0;
@@ -1217,7 +1220,7 @@ ul#page-stream {
   li.activity  {
     span + a {
     display: block;
-    } 
+    }
   }
   .activity-time {
     display: block;
@@ -2769,7 +2772,7 @@ a.rsvp-guests-count {
     }
   }
   .feature-slides {
-    .slides { 
+    .slides {
       li {
         max-height: 520px;
       }
