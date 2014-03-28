@@ -2,7 +2,7 @@
 
   {% case homepage_excerpt.type_name %}
 
-  <!-- basic page -->  
+  <!-- basic page -->
   {% when 'Basic' %}
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Featured page</a></h5>
@@ -23,11 +23,11 @@
     {% for post in homepage_excerpt.blog.most_recent_blog_posts limit:1 offset:0 %}
       <div class="page-excerpt" id="blog-post-page-{{ post.id }}">
         <h3><a href="{{ post.url }}">{{ post.headline }}</a></h3>
-        
+
         <div class="byline">
           Posted by {{ post.author.published_name_linked }} &middot; {{ post.published_at | date: '%B %d, %Y %l:%M %p' }} &middot; {% if post.show_stream? %}<a href="{{ post.url }}#addreaction">{% if post.public_activities_count > 0 %}{{ post.public_activities_count }} reaction{% if post.public_activities_count > 1 %}s{% endif %}{% else %}Add your reaction{% endif %}{% endif %}</a>
         </div>
-        
+
         <div class="excerpt">
           {{ post.blog_post.content }}
           {% if post.blog_post.is_extended? %}
@@ -40,12 +40,12 @@
     <hr/>
 
   <!-- blog post page -->
-  {% when 'Blog Post' %}  
+  {% when 'Blog Post' %}
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Featured post</a></h5>
 
     <h3 class="excerpt-title"><a href="{{ post.url }}">{{ post.headline }}</a></h3>
-    
+
     <div class="byline">
       Posted by {{ post.author.published_name_linked }} &middot; {{ post.published_at | date: '%B %d, %Y %l:%M %p' }}
       {% if post.show_stream? %}
@@ -56,8 +56,8 @@
     </div>
 
     <div class="truncate-500" data-truncate="500">{{ homepage_excerpt.blog_post.content }}</div>
-    
-    {% if homepage_excerpt.blog_post.is_extended? %}      
+
+    {% if homepage_excerpt.blog_post.is_extended? %}
      <span class="continue"><a href="{{ homepage_excerpt.url }}">Continue reading &rarr;</a></span>
     {% endif %}
 
@@ -70,7 +70,7 @@
       {% endif %}
       </a>
     {% endif %}
-    
+
     {{ "Share" | share_button page_id: post.id }}
 
     <hr/>
@@ -126,8 +126,6 @@
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Donate</a></h5>
 
-    <h3 class="excerpt-title"><a href="{{ post.url }}">{{ homepage_excerpt.headline }}</a></h3>
-
     {% assign thermo_width = 48.61878453038674 %}
 
     {% if homepage_excerpt.donation.has_amount_goal? %}
@@ -164,15 +162,11 @@
 
     {% endif %}
 
-    {% if homepage_excerpt.donation.content.size > 0 %}
-    {{ homepage_excerpt.donation.content }}
-    {% endif %}
-
     <a class="button submit-link" href="{{ homepage_excerpt.url }}">Donate</a>
 
     <hr/>
 
-  <!-- endorsement page -->  
+  <!-- endorsement page -->
   {% when 'Endorsement' %}
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Endorse</a></h5>
@@ -283,7 +277,7 @@
   {% when 'Feedback' %}
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Contact</a></h5>
-    
+
     {% if homepage_excerpt.feedback.content.size > 0 %}
     {{ homepage_excerpt.feedback.content }}
     {% endif %}
@@ -292,7 +286,7 @@
 
     <hr/>
 
-  <!-- Leaderboard page --> 
+  <!-- Leaderboard page -->
   {% when 'Leaderboard' %}
 
     <h5 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Featured leaderboard</a></h5>
@@ -590,7 +584,7 @@
     {% if homepage_excerpt.suggestion.is_answered? %}
       <div class="row-fluid padtopmore">
         <div class="span12">
-          <div class="answer clearfix"> 
+          <div class="answer clearfix">
             <div>
               <strong>
                 Official response from {{ homepage_excerpt.suggestion.answer_author.published_name_linked }}
