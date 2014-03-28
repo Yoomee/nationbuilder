@@ -20,9 +20,9 @@ $button-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // forms font
 $form-font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
-$theme-color-1: #f04f23;
+$theme-color-1: #ee3224; // labour red
 $theme-color-2: #2f2f2f;
-$theme-color-3: #0b0b0b;
+$theme-color-3: #1e1e1e; // labour dark grey
 $theme-color-4: #898a8a;
 
 // form input area focus colors
@@ -62,9 +62,8 @@ $green: #619114;
 
 // headers and footers
 $header-texture: url("header-background.jpg");
-$footer-texture: url("header-background.jpg");
-$header-color: #0b0b0b;
-$footer-color: $header-color;
+$header-color: $theme-color-3;
+$footer-color: $theme-color-3;
 $event-icon: "event-icon.png";
 $event-icon-retina: "event-icon_2x.png";
 $homepage-intro-font-weight: 400;
