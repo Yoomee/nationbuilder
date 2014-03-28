@@ -6,26 +6,26 @@
 //* style variables *//
 
 // headline font
-$headline-font: "Crimson Text", Times, "Times New Roman", serif;
+$headline-font: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 
 // main font
-$font: "Crimson Text", Times, "Times New Roman", serif;
+$font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
 // control font
-$control-font: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+$control-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // buttons font
 $button-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // forms font
-$form-font: "Ovo", Times, "Times New Roman", serif;
+$form-font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
 $theme-color-1: #f04f23;
 $theme-color-2: #2f2f2f;
 $theme-color-3: #0b0b0b;
 $theme-color-4: #898a8a;
 
-// form input area focus color
+// form input area focus colors
 $theme-color-5: rgba(210, 78, 31, 0.6);
 
 $theme-color-6: #fff;
@@ -260,7 +260,7 @@ h4 {
       margin-top: 0;
       margin-bottom: 0;
     }
-  } 
+  }
 }
 
 .right-column a.supporter-nav-button.button:first-of-type {
@@ -890,7 +890,7 @@ input#donation_amount_other {
   left: 0;
 }
 
-.content-pages-show-donation-wide { 
+.content-pages-show-donation-wide {
   .headline {
     margin-top: 0;
   }
@@ -953,7 +953,7 @@ ul#page-stream {
   li.activity  {
     span + a {
     display: inline;
-    } 
+    }
   }
   .activity-time {
     display: inline;
@@ -1216,8 +1216,8 @@ and (min-device-width : 800px) and (max-device-width : 1280px) and (orientation 
 
 // Retina assets
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
+@media
+(-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
   .page-type-event {
     #headline {
