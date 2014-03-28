@@ -6,11 +6,15 @@
 
 <div id="content">
 
-  <div id="intro" class="intro">
+  <div id="intro" class="intro clearfix">
     <div class="text-content">
       {{ page.basic.content }}
     </div>
   </div>
+
+  {% if page.is_homepage? %}
+    {% subpage "blog" with "blog_latest" %}
+  {% endif %}
 
   {% if page.tags_count > 0 %}
   <div class="page-tags">
