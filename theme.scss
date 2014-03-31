@@ -49,9 +49,6 @@
 // format user submitted code in comments
 @import "code_ray";
 
-// attlee overrides and theme-specific
-@import "attlee";
-
 // start: forms
 
 // bootstrap forms
@@ -2891,3 +2888,6 @@ ul.homepage_excerpt-list {
     margin: 1em 0;
   }
 }
+
+// attlee overrides and theme-specific
+@import "attlee";
