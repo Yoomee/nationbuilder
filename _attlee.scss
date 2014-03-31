@@ -1,3 +1,20 @@
+// homepage areas
+@media screen and (min-width: 640px) {
+  body.homepage {
+    div.width-container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    div.intro {
+      background-color: $theme-color-1;
+    }
+  }
+}
+
+// navigation and header overrides
+div.nav-wrap {
+  border-bottom: 0;
+}
 div.header-wrap {
   display: none;
 }
