@@ -2,11 +2,14 @@
 @media screen and (min-width: 640px) {
   body.homepage {
     div.width-container {
-      width: 100%;
-      margin: 0 auto;
+      // width: 100%;
+      // margin: 0 auto;
     }
-    div.intro {
-      background-color: $theme-color-1;
+    div.profile-photo {
+      img {
+        width: 400px;
+        height: 400px;
+      }
     }
   }
 }
