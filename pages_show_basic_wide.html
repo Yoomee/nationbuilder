@@ -31,7 +31,14 @@
   </div>
 
   {% if page.is_homepage? %}
-    {% subpage "blog" with "blog_latest" %}
+    <div class="row-fluid">
+      <div class="span8 offset2">
+        <div class="homepage-section-container">
+          <h1>Campaign Latest</h1>
+          {% subpage "blog" with "blog_latest" %}
+        </div>
+      </div>
+    </div>
   {% endif %}
 
   {% if page.tags_count > 0 %}

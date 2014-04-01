@@ -1,14 +1,38 @@
 // homepage areas
-@media screen and (min-width: 640px) {
-  body.homepage {
-    div.width-container {
-      // width: 100%;
-      // margin: 0 auto;
+body.homepage {
+  div.text-content {
+    margin-top: 35px;
+    padding:35px;
+    background-color: $theme-color-1;
+    h1 {
+      line-height: 55px;
+      color: #fff;
     }
     div.profile-photo {
+      text-align: center;
       img {
         width: 400px;
         height: 400px;
+      }
+    }
+  }
+  // sections
+  div.homepage-section-container {
+    
+  }
+}
+@media screen and (max-width: 640px) {
+  body.homepage {
+    div.text-content {
+      padding:20px;
+      h1 {
+        line-height: 35px;
+      }
+    }
+    div.profile-photo {
+      img {
+        width: 280px;
+        height: 280px;
       }
     }
   }
