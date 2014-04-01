@@ -4,23 +4,6 @@ $(document).ready(function(){
 
   (function(){
 
-    // Centers navigation dropdowns
-    this.initializeDropdowns = function(dropdownLink) {
-      var dropdown = dropdownLink.children('.sub');
-      var parentWidth = dropdownLink.children('a').width();
-      var iconWidth = dropdownLink.find('a > i').width();
-      var dropdownWidth = dropdown.outerWidth();
-      dropdown.css('left',(parentWidth-iconWidth-dropdownWidth)/2); // -20px invisible margin for arrow down
-    }
-
-    // Centers subnav dropdowns
-    this.initializeSubnavDropdowns = function(dropdownLink) {
-      var dropdown = dropdownLink.children('.sub');
-      var parentWidth = dropdownLink.children('a').outerWidth();
-      var dropdownWidth = dropdown.outerWidth();
-      dropdown.css('left',(parentWidth-dropdownWidth)/2); // -20px invisible margin for arrow down
-    }
-
     // Align navigation elements left if navigation elements wrap
     this.checkNavWrap = function() {
       if ($('.desktop-nav > li').length) {
@@ -40,14 +23,6 @@ $(document).ready(function(){
     this.centerDropdowns = function() {
       var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
       if(($(window).width() > 768) && !isMobile) {
-        $('nav .drop').hover(function() {
-          PresenceTheme.initializeDropdowns($(this));
-        });
-
-        $('.subnav .drop').hover(function() {
-          PresenceTheme.initializeSubnavDropdowns($(this));
-        });
-
         this.checkNavWrap();
       }
     }
@@ -119,7 +94,7 @@ $(document).ready(function(){
       });
     }
 
-    this.validateEmail = function(email) { 
+    this.validateEmail = function(email) {
         var re = /\S+@\S+\.\S+/;
         return re.test(email);
     }
@@ -238,7 +213,7 @@ $(document).ready(function(){
     }
 
   }).apply(PresenceTheme);
-  
+
   // Navigation centering
   PresenceTheme.centerDropdowns();
   $(window).resize(function(){

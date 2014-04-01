@@ -42,6 +42,62 @@ nav.width-container ul li {
   }
 }
 
+ul#topnav.desktop-nav {
+  background-color: $theme-color-18;
+  margin-top: 40px;
+  li {
+    padding: 15px 40px;
+    a {
+      color: #fff;
+      &:hover {
+        color: $theme-color-1;
+      }
+    }
+    .sub {
+      top: 65px;
+      left: 50%;
+      width: 250px;
+      margin-left: -125px;
+      background-color: #fff;
+      color: $theme-color-18;
+      padding: 0;
+      text-align: center;
+      font-family: $control-font;
+      font-size: 13px;
+      border-top: 3px solid $theme-color-18;
+      border-left: 3px solid $theme-color-18;
+      border-right: 3px solid $theme-color-18;
+      & > li {
+        width: 100%;
+        border-bottom: 3px solid $theme-color-18;
+        line-height: 31px;
+        padding: 0;
+      }
+      a {
+        background: $theme-color-15;
+        font-family: $control-font;
+        font-size: 13px;
+        line-height: 18px;
+        padding: 7px 1.5em 6px 1.5em;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: $theme-color-18;
+        width: 193px;
+        &:hover {
+          background: $theme-color-16;
+        }
+        &:active {
+          background: $theme-color-17;
+        }
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 640px) {
   nav.width-container ul li {
     text-align: right;

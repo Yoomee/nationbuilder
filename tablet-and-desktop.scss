@@ -289,22 +289,21 @@ nav.width-container, .subnav {
     }
   }
   & > ul li:hover a {
-    color: $homepage-nav-link-color; 
+    color: $homepage-nav-link-color;
   }
   .drop {
     position:relative;
   }
-  /* controls bg color of top when hovering on sub */
   .sub {
     position: absolute;
-    top: 40px;
-    left: -25%;
+    top: 65px;
+    left: 0;
     z-index: 99999;
     background-color: $theme-color-15;
     color: $theme-color-18;
     padding: 0;
     text-align: center;
-    display: none;
+    display: none; 
     font-family: $control-font;
     font-size: 13px;
     border-top: 3px solid $theme-color-18;
