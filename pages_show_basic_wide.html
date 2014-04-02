@@ -39,14 +39,21 @@
     </div>
   {% endif %}
 
+  {% if page.is_homepage? == true %}
+    <div class="row-fluid homepage-section">
+      <div class="span6 feature-promo">
+        {% include "homepage_excerpt_signup" with 'join' %}
+      </div>
+      <div class="span6 feature-promo">
+        {% tag "homepage" with "homepage_donate" %}
+      </div>
+    </div>
+  {% endif %}
+
   {% if page.tags_count > 0 %}
   <div class="page-tags">
     {% include "page_tags" with page %}
   </div>
-  {% endif %}
-
-  {% if page.is_homepage? == true and site.page_tags contains "homepage" %}
-    {% tag "homepage" with "homepage_widget" %}
   {% endif %}
 
   <div class="like-page">

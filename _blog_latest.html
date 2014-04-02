@@ -1,5 +1,5 @@
 {% for post in page.blog.most_recent_blog_posts limit:3 offset:0 %}
-<div class="span3">
+<div class="span3 post-teaser">
   <h4><a href="{{ post.url }}">{{ post.headline }}</a></h4>
   <div class="byline">{{ post.published_at | date: '%b %d, %Y' }}</div>
   <p class="blog_teaser">{{ post.blog_post.content | strip_html | truncatewords:50 }}</p>

@@ -124,25 +124,24 @@
   <!-- donation page -->
   {% when 'Donation' %}
 
-    <h2 class="excerpt-type"><a href="{{ homepage_excerpt.url }}">Donate to Oliver Coppard</a></h2>
+    <h1><a href="{{ homepage_excerpt.url }}">Donate</a></h1>
 
     {% assign thermo_width = 48.61878453038674 %}
 
     {% if homepage_excerpt.donation.has_amount_goal? %}
+
     <div class="clearfix">
-    <div class="progress" style="width: {{ thermo_width }}%;">
-      <div class="bar bar-success" style="width: {{ homepage_excerpt.donation.percent_of_amount_goal | times:100 }}%;">
-        {% if homepage_excerpt.donations_count < 1 %}
-        <div class="bar-text">Just started</div>
-        {% else %}
-        <div class="bar-text">{{ homepage_excerpt.donations_amount_format }} raised</div>
-        {% endif %}
+      <div class="progress" style="width: {{ thermo_width }}%;">
+        <div class="bar bar-success" style="width: {{ homepage_excerpt.donation.percent_of_amount_goal | times:100 }}%;">
+          {% if homepage_excerpt.donations_count < 1 %}
+          <div class="bar-text">Just started</div>
+          {% else %}
+          <div class="bar-text">{{ homepage_excerpt.donations_amount_format }} raised</div>
+          {% endif %}
+        </div>
       </div>
     </div>
-
     <div class="bar-goal">GOAL: {{ homepage_excerpt.donation.amount_goal_format }}</div>
-
-    </div>
 
     {% elsif homepage_excerpt.donation.has_donor_goal? %}
 
@@ -155,16 +154,14 @@
           <div class="bar-text">{{ homepage_excerpt.donations_count }} donors</div>
           {% endif %}
         </div>
-        <div class="bar-goal">{{ homepage_excerpt.donation.donor_goal }} donors</div>
       </div>
-
     </div>
+    <div class="bar-goal">{{ homepage_excerpt.donation.donor_goal }} donors</div>
 
     {% endif %}
 
     <a class="button submit-link" href="{{ homepage_excerpt.url }}">Donate</a>
 
-    <hr/>
 
   <!-- endorsement page -->
   {% when 'Endorsement' %}

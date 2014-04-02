@@ -11,6 +11,18 @@ body.homepage {
         }
       }
     }
+    h4 a {
+      &:hover {
+        border-bottom: 2px solid $theme-color-1;
+      }
+    }
+    div.post-teaser {
+      a {
+        &:hover {
+          border-bottom: 2px solid $theme-color-1;
+        }
+      }
+    }
   }
   div.text-content {
     margin-top: 35px;
@@ -28,9 +40,61 @@ body.homepage {
       }
     }
   }
-  // sections
-  div.homepage-section-container {
-
+  div.feature-promo {
+    background-color: $theme-color-21;
+    min-height: 400px;
+    h1 {
+      display: block;
+      width: 100%;
+      background-color: $theme-color-1;
+      padding: 20px;
+      a {
+        color: #fff;
+        &:hover {
+          color: #fff;
+          border-bottom: 2px solid #fff;
+        }
+      }
+    }
+    p {
+      padding: 0 25px;
+      font-size: 20px;
+      a {
+        &:hover {
+          border-bottom: 2px solid $theme-color-1;
+        }
+      }
+    }
+    p.sub-action {
+      font-size:16px;
+      padding-top:25px;
+    }
+    h4 {
+      padding: 0 25px;
+    }
+    .email-signup {
+      padding: 0;
+      form {
+        padding: 25px 0 0 0;
+      }
+      input.text {
+        height: 60px;
+        font-size: 28px;
+        line-height: 35px;
+        border: 0;
+        background-color: #fff;
+      }
+      .submit-button {
+        font-size: 22px;
+        line-height: 22px;
+        height: 60px;
+        vertical-align: bottom;
+        top: 0;
+        &:hover {
+          background-color: $theme-color-3;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 640px) {
