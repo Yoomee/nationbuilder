@@ -72,6 +72,16 @@ body.homepage {
     h4 {
       padding: 0 25px;
     }
+    a.submit-link {
+      font-size: 22px;
+      line-height: 22px;
+      height: 60px;
+      vertical-align: bottom;
+      padding: 20px 12px 16px 12px;
+      width: 142px;
+      margin: 0 auto;
+      display: block;
+    }
     .email-signup {
       padding: 0;
       form {
@@ -90,10 +100,10 @@ body.homepage {
         height: 60px;
         vertical-align: bottom;
         top: 0;
-        &:hover {
-          background-color: $theme-color-3;
-        }
       }
+    }
+    div.progress {
+      margin-top: 25px;
     }
   }
 }

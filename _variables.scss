@@ -33,11 +33,6 @@ $theme-color-6: #fff;
 // supporter nav colors
 $theme-color-7: #5b5b5b;
 
-// button colors
-$theme-color-8: #f04f23;
-$theme-color-9: #c6c6c6;
-$theme-color-10: #c6c6c6;
-
 // main body color
 $theme-color-11: #fff;
 
@@ -51,10 +46,14 @@ $theme-color-15: #fff;
 $theme-color-16: #e9e9e9;
 $theme-color-17: #b7b7b7;
 $theme-color-18: #343434; // dark gray
-$theme-color-19: #fff;
-$theme-color-20: #fff;
+$theme-color-19: $theme-color-6;
+$theme-color-20: $theme-color-6;
 $theme-color-21: #ece6d3; // light brown bg
 
+// button colors
+$theme-color-8: $theme-color-1;
+$theme-color-9: $theme-color-18;
+$theme-color-10: $theme-color-18;
 
 // general success and error colors
 $red: #a22;

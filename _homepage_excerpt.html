@@ -125,8 +125,9 @@
   {% when 'Donation' %}
 
     <h1><a href="{{ homepage_excerpt.url }}">Donate</a></h1>
-
-    {% assign thermo_width = 48.61878453038674 %}
+    <p>Can you chip in? Help us build a winning campaign.</p>
+    <h4>Target: {{ homepage_excerpt.donation.amount_goal_format }}</h4>
+    {% assign thermo_width = 100 %}
 
     {% if homepage_excerpt.donation.has_amount_goal? %}
 
@@ -141,7 +142,6 @@
         </div>
       </div>
     </div>
-    <div class="bar-goal">GOAL: {{ homepage_excerpt.donation.amount_goal_format }}</div>
 
     {% elsif homepage_excerpt.donation.has_donor_goal? %}
 
