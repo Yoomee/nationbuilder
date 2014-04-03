@@ -4,6 +4,12 @@ $(document).ready(function(){
 
   (function(){
 
+    // signup scroll on homepage
+    $('#signup-prompt').on("click", function(e) {
+      e.preventDefault();
+			$.scrollTo($('#campaign-actions'), 800);
+    });
+
     // Align navigation elements left if navigation elements wrap
     this.checkNavWrap = function() {
       if ($('.desktop-nav > li').length) {
