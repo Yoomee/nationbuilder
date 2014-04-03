@@ -27,6 +27,22 @@ body.homepage {
       }
     }
   }
+  div.profile-photo {
+    text-align: center;
+    img {
+      width: 480px;
+      height: 480px;
+    }
+    h5 {
+      margin-top: 25px;
+      a {
+        &:hover {
+          color: $theme-color-1;
+          border-bottom: 2px solid $theme-color-1;
+        }
+      }
+    }
+  }
   div.text-content {
     margin-top: 35px;
     padding:35px;
@@ -34,13 +50,6 @@ body.homepage {
     h1 {
       line-height: 55px;
       color: #fff;
-    }
-    div.profile-photo {
-      text-align: center;
-      img {
-        width: 400px;
-        height: 400px;
-      }
     }
   }
   div.feature-promo {

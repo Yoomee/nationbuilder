@@ -13,6 +13,7 @@
           {% for file in page.attachments %}
             {% if file.file_name contains 'profile' %}
             <img src="{{ file.url }}" class="img-circle">
+            <h5><a href="/about">Oliver Coppard: about</a></h5>
             {% endif %}
           {% endfor %}
         </div>
@@ -30,15 +31,6 @@
     {% endif %}
   </div>
 
-  {% if page.is_homepage? %}
-    <div class="row-fluid homepage-section">
-      <div class="span3">
-        <h1><a href="/blog">Campaign Latest</a></h1>
-      </div>
-      {% subpage "blog" with "blog_latest" %}
-    </div>
-  {% endif %}
-
   {% if page.is_homepage? == true %}
     <div class="row-fluid homepage-section">
       <div class="span6 feature-promo">
@@ -47,6 +39,15 @@
       <div class="span6 feature-promo">
         {% tag "homepage" with "homepage_donate" %}
       </div>
+    </div>
+  {% endif %}
+
+  {% if page.is_homepage? %}
+    <div class="row-fluid homepage-section">
+      <div class="span3">
+        <h1><a href="/blog">Campaign Latest</a></h1>
+      </div>
+      {% subpage "blog" with "blog_latest" %}
     </div>
   {% endif %}
 
