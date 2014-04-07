@@ -15,8 +15,8 @@
         <div class="profile-photo">
           {% for file in page.attachments %}
             {% if file.file_name contains 'profile' %}
-            <img src="{{ file.url }}" class="img-circle">
-            <h5><a href="/about">Oliver Coppard: about</a></h5>
+              <img src="{{ file.url }}" class="img-circle">
+              <h5><a href="/about">Oliver Coppard: find out more</a></h5>
             {% endif %}
           {% endfor %}
         </div>
