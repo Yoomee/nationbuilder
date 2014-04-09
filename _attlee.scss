@@ -50,7 +50,7 @@ body.homepage {
     text-align: center;
     img {
       width: 480px;
-      height: 480px;
+      height: auto;
     }
     h5 {
       margin-top: 25px;
@@ -139,6 +139,7 @@ body.homepage {
           vertical-align: bottom;
           top: 185px;
           left: 175px;
+          width: 142px;
         }
         label.lbl-postcode {
           top:88px;
@@ -272,7 +273,41 @@ ul#topnav.desktop-nav {
   }
 }
 
-@media all and (max-width: 640px) {
+// portrait and landscape ipad
+@media only screen and (min-width : 768px) and (max-width : 1024px)  {
+  body.homepage div#feature-action {
+    display: none;
+  }
+  .homepage .intro h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  body.homepage div.text-content {
+    padding: 22px;
+    margin-top: 0;
+  }
+  body.homepage div.feature-promo .email-signup form input,
+  body.homepage div.feature-promo .email-signup form label {
+    position: static;
+    display: block;
+    padding: 10px;
+  }
+  body.homepage div.homepage-section h1 {
+    font-size: 26px;
+  }
+}
+
+// nav fix for mobile
+//@media only screen and (max-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px), only screen and (min-width : 800px) and (max-width : 1280px) and (orientation : portrait) {
+  nav.width-container {
+    width: 12em;
+    left: -12em;
+  }
+  ul#topnav.desktop-nav li .sub {
+    width: auto;
+    margin-left: 0;
+  }
   nav.width-container ul li {
     text-align: right;
     a {

@@ -303,7 +303,7 @@ nav.width-container, .subnav {
     color: $theme-color-18;
     padding: 0;
     text-align: center;
-    display: none; 
+    display: none;
     font-family: $control-font;
     font-size: 13px;
     border-top: 3px solid $theme-color-18;
@@ -948,8 +948,8 @@ ul#page-stream {
 }
 
 // iPads and Android tablets portrait mode
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px), only screen
-and (min-device-width : 800px) and (max-device-width : 1280px) and (orientation : portrait) {
+@media only screen and (min-width : 768px) and (max-width : 1024px), only screen
+and (min-width : 800px) and (max-width : 1280px) and (orientation : portrait) {
 
   // off canvas nav to be used on tablets, since drop downs don't work on touch devices
   nav.width-container {
