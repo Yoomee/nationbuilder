@@ -273,30 +273,7 @@ ul#topnav.desktop-nav {
   }
 }
 
-// portrait and landscape ipad
-@media only screen and (min-width : 768px) and (max-width : 1024px)  {
-  body.homepage div#feature-action {
-    display: none;
-  }
-  .homepage .intro h1 {
-    font-size: 26px;
-    line-height: 30px;
-  }
-  body.homepage div.text-content {
-    padding: 22px;
-    margin-top: 0;
-  }
-  body.homepage div.feature-promo .email-signup form input,
-  body.homepage div.feature-promo .email-signup form label {
-    position: static;
-    display: block;
-    padding: 10px;
-  }
-  body.homepage div.homepage-section h1 {
-    font-size: 26px;
-  }
-}
-
+// mobile fixes for homepage layout
 
 @mixin mobile-nav-fixes {
   nav.width-container {
@@ -322,7 +299,28 @@ ul#topnav.desktop-nav {
     }
   }
 }
-// nav fix for mobile
-@media only screen and (min-width : 320px) and (max-width : 1280px) {
+
+
+@media only screen and (min-width : 320px) and (max-width : 1024px) {
   @include mobile-nav-fixes;
+  body.homepage div#feature-action {
+    display: none;
+  }
+  .homepage .intro h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  body.homepage div.text-content {
+    padding: 22px;
+    margin-top: 0;
+  }
+  body.homepage div.feature-promo .email-signup form input,
+  body.homepage div.feature-promo .email-signup form label {
+    position: static;
+    display: block;
+    padding: 10px;
+  }
+  body.homepage div.homepage-section h1 {
+    font-size: 26px;
+  }
 }
