@@ -297,12 +297,11 @@ ul#topnav.desktop-nav {
   }
 }
 
-// nav fix for mobile
-//@media only screen and (max-width : 1024px) {
-@media only screen and (min-width : 768px) and (max-width : 1024px), only screen and (min-width : 800px) and (max-width : 1280px) and (orientation : portrait) {
+
+@mixin mobile-nav-fixes {
   nav.width-container {
-    width: 12em;
-    left: -12em;
+    width: 12em !important;
+    left: -12em !important;
   }
   ul#topnav.desktop-nav li .sub {
     width: auto;
@@ -322,4 +321,8 @@ ul#topnav.desktop-nav {
       color: #fff;
     }
   }
+}
+// nav fix for mobile
+@media only screen and (min-width : 320px) and (max-width : 1280px) {
+  @include mobile-nav-fixes;
 }
