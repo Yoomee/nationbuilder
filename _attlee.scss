@@ -73,7 +73,7 @@ body.homepage {
   }
   div.feature-promo {
     background-color: $theme-color-21;
-    min-height: 400px;
+    min-height: 500px;
     h1 {
       display: block;
       width: 100%;
@@ -116,21 +116,51 @@ body.homepage {
     .email-signup {
       padding: 0;
       form {
-        padding: 25px 0 0 0;
-      }
-      input.text {
-        height: 40px;
-        font-size: 22px;
-        line-height: 35px;
-        border: 0;
-        background-color: #fff;
-      }
-      .submit-button {
-        font-size: 22px;
-        line-height: 22px;
-        height: 60px;
-        vertical-align: bottom;
-        top: 0;
+        position: relative;
+        margin: 0px 25px;
+        display: block;
+        min-height: 235px;
+        input, label {
+          position: absolute;
+          top:0;
+          left:0;
+        }
+        input.text {
+          height: 40px;
+          font-size: 22px;
+          line-height: 35px;
+          border: 0;
+          background-color: #fff;
+        }
+        .submit-button {
+          font-size: 22px;
+          line-height: 22px;
+          height: 60px;
+          vertical-align: bottom;
+          top: 185px;
+          left: 175px;
+        }
+        label.lbl-postcode {
+          top:88px;
+        }
+        input.first-name {
+          top: 28px;
+          width: 225px;
+        }
+        input.last-name {
+          top: 28px;
+          left: 250px;
+          width: 225px;
+        }
+        input.postcode {
+          top: 118px;
+          width: 225px;
+        }
+        input.email {
+          top: 118px;
+          width: 225px;
+          left: 250px;
+        }
       }
     }
     div.progress {

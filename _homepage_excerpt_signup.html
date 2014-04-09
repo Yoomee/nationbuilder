@@ -1,18 +1,15 @@
   <h1><a href="/join">Get Involved</a></h1>
   <div class="email-signup form">
-    <p>Share our commitment to a better future for Sheffield Hallam?</p>
-    <h4>Sign up today.</h4>
+    <p>Share our commitment to a better future for Sheffield Hallam? <strong>Sign up today.</strong></p>
     {% form_for signup %}
      {% hidden_field_tag "page_id", page.id %} <div class="form-errors">{% error_messages_for signup %}</div>
-      <label for="signup_first_name">Name</label>
-      {% text_field "first_name", class:"text", placeholder:"First", required: "required" %}
-      {% text_field "last_name", class:"text", placeholder:"Last", required: "required" %}
-      <label for="signup_address">Postcode</label>
-      {% text_field "submitted_address", class:"text", placeholder:"Postcode", required: "required" %}
-      <label for="signup_email">Email</label>
-      {% email_field "email", class:"text", placeholder:"Email address", required: "required" %}
+      <label for="signup_first_name" class="lbl-name">Name</label>
+      {% text_field "first_name", class:"text first-name", placeholder:"First", required: "required" %}
+      {% text_field "last_name", class:"text last-name", placeholder:"Last", required: "required" %}
+      <label for="signup_address" class="lbl-postcode">Details</label>
+      {% text_field "submitted_address", class:"text postcode", placeholder:"Postcode", required: "required" %}
+      {% email_field "email", class:"text email", placeholder:"Email address", required: "required" %}
       {% submit_tag "Join", class:"submit-button" %}
-
       <div class="form-submit"></div>
     {% endform_for %}
     <p class="sub-action">Ready to take action? <a href="/volunteer">Volunteer</a>.</p>
