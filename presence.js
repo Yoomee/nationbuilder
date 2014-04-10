@@ -10,6 +10,11 @@ $(document).ready(function(){
 			$.scrollTo($('#campaign-actions'), 800);
     });
 
+    // scroll to facetweet clock if present
+    if($("div.flash-share").length) {
+      $.scrollTo($('#flash'), 800);
+    }
+
     // Align navigation elements left if navigation elements wrap
     this.checkNavWrap = function() {
       if ($('.desktop-nav > li').length) {
