@@ -193,6 +193,23 @@ body.homepage {
   }
 }
 
+// share bar
+div.social-bar {
+  background-color: $theme-color-1;
+  div {
+    h1, div.sharetable {
+      margin-top:35px;
+      margin-bottom: 35px;
+    }
+    h1 {
+      color: #fff;
+    }
+    div.like-page {
+      margin: 0;
+    }
+  }
+}
+
 // facetweet
 div.flash-share {
   border: 10px solid #ee3224;
