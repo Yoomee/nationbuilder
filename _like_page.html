@@ -1,8 +1,10 @@
 <div class="sharetable padtopless clearfix">
   <div class="twitter-cell">
+    <img src="01_twitter.png" width="64" height="64" class="desktop-visible" />
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-text="{{ page.default_face_tweet_text }}" data-via="{{ site.broadcaster.twitter_login }}">Tweet</a>
   </div>
   <div class="facebook-cell">
+    <img src="02_facebook.png" width="64" height="64" class="desktop-visible" />
     {% if request.sorta_logged_in? %}
     <div class="desktop-visible">
       <fb:like href="{{ page.full_url }}" layout="button" show_faces="false" width="300" send="true" action="like" colorscheme="{{ site.facebook_colorscheme }}" ref="r{{ current_signup.id }}"></fb:like>

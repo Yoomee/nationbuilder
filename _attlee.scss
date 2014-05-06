@@ -211,6 +211,18 @@ div.social-bar {
     }
     div.like-page {
       margin: 0;
+      div.twitter-cell, div.facebook-cell {
+        position: relative;
+        width: 250px;
+        padding-left: 74px;
+        img {
+          position: absolute;
+          width: 64px;
+          height: 64px;
+          height: 64px;
+          top: -17px;
+        }
+      }
     }
   }
 }
