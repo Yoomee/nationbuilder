@@ -126,7 +126,11 @@
 
     <h1><a href="{{ homepage_excerpt.url }}">Donate</a></h1>
     <p>Can you chip in? Help us build a winning campaign.</p>
-    <h4>Target: {{ homepage_excerpt.donation.amount_goal_format }}</h4>
+    {% if homepage_excerpt.donation.has_amount_goal? %}
+      <h4>Target: {{ homepage_excerpt.donation.amount_goal_format }}</h4>
+    {% elsif homepage_excerpt.donation.has_donor_goal? %}
+      <h4>Target: {{ homepage_excerpt.donation.donor_goal }} supporters</h4>
+    {% endif %}
     {% assign thermo_width = 100 %}
 
     {% if homepage_excerpt.donation.has_amount_goal? %}
@@ -156,7 +160,6 @@
         </div>
       </div>
     </div>
-    <div class="bar-goal">{{ homepage_excerpt.donation.donor_goal }} donors</div>
 
     {% endif %}
 
