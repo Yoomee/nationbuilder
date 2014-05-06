@@ -7,27 +7,30 @@
 <div id="content">
   <div id="intro" class="intro clearfix">
     {% if page.is_homepage? %}
-    <div id="feature-action" class="desktop-visible">
-      <a class="button submit-link" id="signup-prompt" href="#">Take action</a>
-    </div>
-    <div class="row-fluid">
-      <div class="span6">
-        <div class="profile-photo">
-          {% for file in page.attachments %}
-            {% if file.file_name contains 'profile' %}
-              <img src="{{ file.url }}" class="img-circle">
-            {% endif %}
-          {% endfor %}
+      <div id="feature-action" class="desktop-visible">
+        <a class="button submit-link" id="signup-prompt" href="#">Take action</a>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="profile-photo">
+            {% for file in page.attachments %}
+              {% if file.file_name contains 'profile' %}
+                <img src="{{ file.url }}" class="img-circle">
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="span6">
+          <div class="text-content">
+            {{ page.basic.content }}
+            <h5><a href="/about">Oliver Coppard: find out more.</a></h5>
+          </div>
         </div>
       </div>
-      <div class="span6">
-        <div class="text-content">
-          {{ page.basic.content }}
-          <h5><a href="/about">Oliver Coppard: find out more.</a></h5>
-        </div>
-      </div>
-    </div>
     {% else %}
+      <div id="feature-action" class="desktop-visible">
+        <a class="button submit-link" id="signup-prompt" href="/join">Take action</a>
+      </div>
       <div class="text-content">
         {{ page.basic.content }}
       </div>

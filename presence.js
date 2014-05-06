@@ -4,10 +4,13 @@ $(document).ready(function(){
 
   (function(){
 
-    // signup scroll on homepage
+    // signup scroll on homepage, acts as link on other pages
     $('#signup-prompt').on("click", function(e) {
-      e.preventDefault();
-			$.scrollTo($('#campaign-actions'), 800);
+      var href = $(this).attr('href');
+      if (href === '#') {
+        e.preventDefault();
+  			$.scrollTo($('#campaign-actions'), 800);
+      }
     });
 
     // scroll to facetweet clock if present

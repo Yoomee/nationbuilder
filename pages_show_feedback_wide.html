@@ -5,7 +5,9 @@
 {% endif %}
 
 <div id="content">
-
+  <div id="feature-action" class="desktop-visible">
+    <a class="button submit-link" id="signup-prompt" href="/join">Take action</a>
+  </div>
   {% if page.feedback.content.size > 0 %}
   <div id="intro" class="intro">
     {{ page.feedback.content }}
