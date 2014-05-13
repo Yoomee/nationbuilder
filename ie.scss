@@ -5,10 +5,7 @@
 @import "compass/css3";
 @import "custom-mixins";
 
-// ie 9 and less
-
 // ie 8
-
 .lt-ie9 {
   .page-excerpt {
     @include nb-clearfix;
@@ -24,7 +21,34 @@
   .email-signup {
     margin-top: 15px;
   }
-  div#feature-action, body.homepage div#feature-action {
+  div#feature-action {
+    top: 295px;
+  }
+  body.homepage div#feature-action {
     top: 430px;
+  }
+  ul.desktop-nav#topnav li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  body.homepage div.feature-promo .email-signup form {
+    input.first-name {
+      top: 28px;
+      width: 175px;
+    }
+    input.last-name {
+      top: 28px;
+      left: 200px;
+      width: 175px;
+    }
+    input.postcode {
+      top: 118px;
+      width: 175px;
+    }
+    input.email {
+      top: 118px;
+      left: 200px;
+      width: 175px;
+    }
   }
 }
