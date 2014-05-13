@@ -5,28 +5,8 @@
 @import "compass/css3";
 @import "custom-mixins";
 
-// ie 8
-.lt-ie9 {
-  .page-excerpt {
-    @include nb-clearfix;
-    .small-button, .button {
-      float: left;
-      margin-right: 10px;
-      min-height: auto;
-    }
-  }
-  .submit-button {
-    min-height: auto;
-  }
-  .email-signup {
-    margin-top: 15px;
-  }
-  div#feature-action {
-    top: 295px;
-  }
-  body.homepage div#feature-action {
-    top: 430px;
-  }
+// IE 9 and less
+.lt-ie10 {
   ul.desktop-nav#topnav li {
     padding-left: 15px;
     padding-right: 15px;
@@ -50,5 +30,29 @@
       left: 200px;
       width: 175px;
     }
+  }
+}
+
+// IE 8
+.lt-ie9 {
+  .page-excerpt {
+    @include nb-clearfix;
+    .small-button, .button {
+      float: left;
+      margin-right: 10px;
+      min-height: auto;
+    }
+  }
+  .submit-button {
+    min-height: auto;
+  }
+  .email-signup {
+    margin-top: 15px;
+  }
+  div#feature-action {
+    top: 295px;
+  }
+  body.homepage div#feature-action {
+    top: 430px;
   }
 }
