@@ -36,10 +36,16 @@
     </div>
     {% endif %}
 
+<div class="row-fluid homepage-section social-bar">
+  <div class="span2 offset1">
+    <h1>Share</h1>
+  </div>
+  <div class="span9">
     <div class="like-page">
-      <h3>Was this helpful?</h3>
       {% include "like_page" %}
     </div>
+  </div>
+</div>
 
     {% if page.show_stream? %}
     {% include "page_stream" %}
