@@ -349,6 +349,15 @@ ul#topnav.desktop-nav {
 }
 
 
+// ipad and below
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  div#feature-action {
+    display: none;
+  }
+}
+
 @media only screen and (min-width : 320px) and (max-width : 1024px) {
   @include mobile-nav-fixes;
   body.homepage div#feature-action {
